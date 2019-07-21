@@ -1,0 +1,39 @@
+
+package algoritmodeeuclides;
+
+import javax.swing.JOptionPane;
+
+
+public class CalcularMdc {
+
+    
+    public static void main(String[] args) {
+        
+        int x, y, i, maior, mdc;
+        
+        x = Integer.parseInt(JOptionPane.showInputDialog("Insira o primeiro número:"));
+        y = Integer.parseInt(JOptionPane.showInputDialog("Insira o segundo número:"));
+        
+        if (x > y){
+           
+            maior = x;
+        
+        } else {
+        
+           maior = y;
+        }       
+        
+        for (i = maior; i >= 0; i-- ){
+        
+           if (x%i == 0 && y%i ==0){
+           
+               JOptionPane.showMessageDialog(null, "MDC" + i);
+               break;
+           }
+        
+        }  
+        
+        
+    }
+    
+}
